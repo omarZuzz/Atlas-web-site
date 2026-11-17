@@ -1,0 +1,72 @@
+.section {
+  background: var(--color-bg-soft);
+  padding: 41px 0 83px;
+}
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 118px;
+  padding-left: 1px;
+  margin-bottom: 75px;
+}
+.pillar {
+  position: relative;
+  padding-left: 27px;
+}
+.pillar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  height: 159px;
+  border-left: 3px solid var(--color-gray-200);
+}
+.pillarNumber {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+  color: var(--color-gold);
+}
+.pillarTitle {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.4;
+  color: var(--color-navy);
+  margin-top: -2px;
+}
+.pillarText {
+  margin-top: 6px;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--color-gray-600);
+  max-width: 352px;
+}
+
+/* Columna editorial del segundo carrusel */
+.title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--fs-h1);
+  line-height: 1.11;
+  color: var(--color-navy);
+  max-width: 486px;
+  margin: -65px 0 0 5px; /* el titular arranca alineado con los chips */
+}
+.text {
+  margin: 2px 0 0 1px;
+  max-width: 442px;
+  font-size: 20px;
+  line-height: 33px;
+  color: var(--color-gray-600);
+}
+.claim {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--color-gray-600);
+}
+@media (max-width: 1100px) {
+  .pillars { grid-template-columns: 1fr; gap: 32px; }
+  .title { margin-top: 0; }
+}

@@ -1,0 +1,40 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 900;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+}
+.button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.label {
+  padding-top: 0.2em; /* compensación óptica Biryani */
+  line-height: 1;
+}
+.withPlus {
+  gap: 6px;
+}
+.plus {
+  flex-shrink: 0;
+}
+
+/* Variantes */
+.navy { background: var(--color-navy); color: var(--color-white); }
+.gold { background: var(--color-gold); color: var(--color-white); }
+.gradient { background: var(--gradient-cta); color: var(--color-navy); border-radius: var(--radius-8); }
+.yellow { background: var(--color-gold-bright); color: var(--color-navy); border-radius: var(--radius-8); }
+
+/* Tamaños (alto exacto del Figma) */
+.sm { height: 37px; padding: 0 14px 0 20px; font-size: var(--fs-14); min-width: 129px; }
+.md { height: 47px; padding: 0 24px; font-size: var(--fs-18); min-width: 249px; }
+.lg { height: 75px; padding: 0 32px; font-size: var(--fs-18); min-width: 279px; }
+.xl { height: 64px; padding: 0 26px; font-size: 24px; min-width: 317px; border-radius: 40px; }
+
+.gradient.sm,
+.yellow.sm { padding: 0 18px; min-width: 137px; }

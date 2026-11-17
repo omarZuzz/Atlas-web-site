@@ -1,0 +1,22 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 37px;
+  min-width: 129px;
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  font-weight: 900;
+  font-size: var(--fs-14);
+  line-height: 1;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.outline {
+  border: 1px solid var(--color-gold-bright);
+  color: var(--color-navy);
+  background: transparent;
+}
+.outline:hover { background: rgba(248, 198, 84, 0.15); }
+.navy { background: var(--color-navy); color: var(--color-white); }
+.gold { background: var(--color-gold); color: var(--color-navy); }

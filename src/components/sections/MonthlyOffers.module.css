@@ -1,0 +1,25 @@
+.section {
+  background: var(--color-bg-soft);
+  padding: 65px 0 52px;
+}
+.eyebrow {
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 7px;
+}
+.title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--fs-h2);
+  line-height: 1.2;
+  color: var(--color-navy);
+  max-width: 476px;
+  margin-top: 10px;
+}
+.note {
+  margin: 24px 0 0 9px;
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--color-gray-600);
+}

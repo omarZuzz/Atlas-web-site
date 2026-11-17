@@ -1,0 +1,103 @@
+/* Se monta entre el Hero y la primera sección: sube 132px sobre la foto.
+   El fondo pasa a #F5F5F5 en el punto exacto en que termina el hero. */
+.wrap {
+  position: relative;
+  z-index: 5;
+  margin-top: -132px;
+  padding: 0 var(--gutter);
+  background: linear-gradient(180deg, transparent 132px, var(--color-bg-soft) 132px);
+}
+.bar {
+  max-width: 1362px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab {
+  width: 546px;
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 8px 8px 0 0;
+  background: var(--color-gold);
+  font-size: 20px;
+  padding-top: 0.2em;
+  margin-bottom: -1px;
+}
+.tab strong { font-weight: 900; color: var(--color-navy); }
+.tab span { color: var(--color-black); }
+
+.panel {
+  width: 100%;
+  min-height: 162px;
+  background: var(--color-navy);
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-29);
+  padding: 21px 44px 12px;
+  color: var(--color-white);
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 19px 13px;
+  border-bottom: 2px solid rgba(18, 230, 245, 0.3);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  min-width: 53px;
+}
+.iconCircle {
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  border-radius: 36px;
+  background: rgba(217, 217, 217, 0.5);
+  border: 3px solid rgba(20, 38, 84, 0.5);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.iconCircle img { width: 53px; height: 53px; max-width: none; }
+.item:hover .iconCircle { background: var(--color-gold); }
+.label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  white-space: nowrap;
+  padding-top: 0.15em;
+}
+.itemActive .iconCircle {
+  background: rgba(20, 38, 84, 0.5);
+  border-color: var(--color-gold-bright);
+}
+.itemActive .label { font-weight: 900; }
+
+.assurances {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding-top: 8px;
+  font-size: 12px;
+}
+.assurances li { display: flex; align-items: center; gap: 8px; }
+.assurances svg { color: var(--color-cyan); flex-shrink: 0; }
+.assurances span { padding-top: 0.25em; }
+.assurances strong { font-weight: 900; }
+
+@media (max-width: 1024px) {
+  .panel { padding-inline: 20px; }
+  .items { justify-content: flex-start; gap: 28px; }
+  .assurances { flex-direction: column; align-items: center; gap: 6px; }
+}
+@media (max-width: 640px) {
+  .tab { font-size: 15px; }
+}

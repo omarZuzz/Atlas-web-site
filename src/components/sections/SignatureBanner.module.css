@@ -1,0 +1,48 @@
+.banner {
+  position: relative;
+  height: 417px;
+  border-top: 24px solid var(--color-gold);
+  box-sizing: content-box;
+  overflow: hidden;
+  isolation: isolate;
+}
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  z-index: -1;
+}
+.lockup {
+  position: absolute;
+  left: max(var(--gutter), calc((100% - 1720px) / 2 + 9px));
+  top: 44px;
+  width: 713px;
+  height: 329px;
+}
+.atlas {
+  position: absolute;
+  left: 220px;
+  top: 0;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 169.6px;
+  line-height: 1.16;
+  color: var(--color-navy);
+}
+.signature {
+  position: absolute;
+  left: 0;
+  top: 83px;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 218px;
+  line-height: 1.12;
+  color: var(--color-gold);
+}
+@media (max-width: 900px) {
+  .banner { height: 300px; }
+  .lockup { transform: scale(0.6); transform-origin: left top; }
+}

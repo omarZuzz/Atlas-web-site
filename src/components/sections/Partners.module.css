@@ -1,0 +1,63 @@
+.section {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: 62px 0 62px;
+}
+.header { text-align: center; }
+.eyebrow { color: var(--color-gold); font-weight: 700; font-size: 20px; }
+.title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(40px, 4.2vw, 80px);
+  line-height: 0.95;
+  margin-top: 8px;
+}
+
+.stripWrap {
+  position: relative;
+  max-width: 1589px;
+  margin: 47px auto 0;
+  padding-inline: var(--gutter);
+}
+.strip {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 57.5px;
+  padding: 0 70px;
+}
+.logos {
+  display: flex;
+  justify-content: space-between;
+  gap: 27px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.logos li { flex: 0 0 auto; scroll-snap-align: start; }
+.logos img { width: 261px; height: 261px; object-fit: contain; }
+.prev, .next { position: absolute; top: 50%; z-index: 2; }
+.prev { left: calc(var(--gutter) + 22px); transform: translateY(-50%) scaleX(1); }
+.next { right: calc(var(--gutter) + 23px); transform: translateY(-50%); }
+
+.cruiseHeader { text-align: center; margin-top: 47px; }
+.cruiseTitle { color: var(--color-gold); font-weight: 700; font-size: 36px; line-height: 1.6; }
+.cruiseSubtitle { font-size: 28px; line-height: 1.6; margin-top: -8px; }
+.cruises {
+  margin-top: 30px;
+  min-height: 181px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 35px;
+  align-items: center;
+}
+.cta { display: flex; justify-content: center; margin-top: 49px; }
+
+@media (max-width: 1280px) {
+  .cruises { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .logos img { width: 200px; height: 200px; }
+}
+@media (max-width: 700px) {
+  .cruises { grid-template-columns: 1fr; }
+  .strip { padding: 0 56px; }
+  .logos img { width: 160px; height: 160px; }
+  .cruiseSubtitle { font-size: 20px; }
+}
